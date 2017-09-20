@@ -17,6 +17,9 @@ Run `npdemon server.js` to run node server using the port 3000 like `http://loca
 ## Mongodb
 Download and install mongodb.
 Run mongo server at port 27017
+## Sample CSV structure
+Use the attached SampleFile.csv for format of data.
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
