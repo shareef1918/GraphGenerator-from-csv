@@ -1,0 +1,36 @@
+<input type="file" #fileImportInput name="File Upload" id="txtFileUpload" class="btn btn-primary" (change)="fileChangeListener($event)" accept=".csv" />
+<div *ngIf="uploadedExcelSheets.length>0?true:false">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Sno</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let record of uploadedExcelSheets; let i = index">
+                <td>{{i+1}}</td>
+                <td><a [routerLink]="['/showGraph',record._id]">{{record.name}}</a></td>
+                <!--
+            <td>{{user.desig}}</td>
+            <td>{{user.age}}</td>
+            <td><button class="btn btn-success" [routerLink]="['/edit',user._id]" (click)="onClick('Edit Student')">Edit</button></td>
+            <td><button class="btn btn-warning" (click)="deleteStudent(user._id)">Delete</button></td>
+            -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="alert alert-success" role="alert" [hidden]=true>
+    <strong>Well done!</strong> You successfully read this important alert message.
+</div>
+<div class="alert alert-info" role="alert" [hidden]=true>
+    <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+</div>
+<div class="alert alert-warning" role="alert" [hidden]=true>
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+</div>
+<div class="alert alert-danger" role="alert" [hidden]=true>
+    <strong>Oh snap!</strong> Change a few things up and try submitting again.
+</div>

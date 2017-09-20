@@ -1,0 +1,20 @@
+<div class="container">
+    <div style="padding:10px">
+        <h2>Graph Generator</h2>
+    </div>
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navbar-offcanvas" data-canvas="body">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+            <a class="navbar-brand" [routerLink]="['/home']" (click)="onClick('Home')">Graph</a>
+        </div>
+        <div class="navbar-offcanvas offcanvas">
+            <ul class="nav navbar-nav">
+                <li [routerLinkActive]="['active']"><a [routerLink]="['/home']">Upload CSV </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
